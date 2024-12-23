@@ -5,6 +5,32 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Jaydeep Sosa</title>
+    <style>
+        @keyframes upDown {
+    0%, 100% {
+        transform: translateY(0); /* Original position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up slightly */
+    }
+}
+
+/* Styling for the Wrapper */
+.header__photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Adjust spacing as needed */
+}
+
+/* Apply Up-Down Animation */
+.header__photo-wrapper img {
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    border-radius: 10px;
+    animation: upDown 2s ease-in-out infinite; /* Infinite up-down animation */
+}
+    </style>
     <link rel="stylesheet" href="main.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
