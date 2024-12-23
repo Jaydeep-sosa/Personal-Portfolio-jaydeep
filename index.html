@@ -229,6 +229,16 @@
            
         </ul>
     </div>
+    <p>Visitor Count: <span id="visitor-count">0</span></p>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize visitor count from localStorage or start at 1 if new visitor
+            let visitorCount = localStorage.getItem('visitorCount') || 0;
+            visitorCount++;
+            localStorage.setItem('visitorCount', visitorCount);
+            document.getElementById('visitor-count').textContent = visitorCount;
+        });
+    </script>
 </footer>
 
 <script defer="defer" type="text/javascript">smoothScroll.init();</script>
