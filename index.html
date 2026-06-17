@@ -1,365 +1,564 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Jaydeep Sosa</title>
-    <link rel="stylesheet" href="main.css" />
-    <style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    </style>
+  <title>Jaydeep Sosa — Laravel Developer</title>
+  <meta name="description" content="Jaydeep Sosa — Laravel & PHP Developer with 1.3 years of hands-on experience building robust web applications." />
+  <meta name="keywords" content="Jaydeep Sosa, Laravel Developer, PHP Developer, Portfolio, Web Developer Gujarat" />
+  <meta name="author" content="Jaydeep Sosa" />
+  <meta name="robots" content="index, follow" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Jaydeep Sosa" />
-    <meta name="keywords" content=" Jaydeep Sosa portfolio" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jaydeep Sosa — Laravel Developer" />
+  <meta property="og:description" content="Laravel & PHP Developer building robust web applications." />
+  <meta property="og:type" content="website" />
 
-    <meta name="author" content="Jaydeep Sosa" />
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index,follow" />
-    <meta name="language" content="English" />
-    <meta name="google" content="notranslate" />
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://kit.fontawesome.com/28432a2a54.js" as="script" crossorigin="anonymous" />
+  <script async src="https://kit.fontawesome.com/28432a2a54.js" crossorigin="anonymous"></script>
 
-
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="https://logosandtypes.com/wp-content/uploads/2024/02/jegs.svg" />
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="https://logosandtypes.com/wp-content/uploads/2024/02/jegs.svg" />
-
-    <script async defer src="assets/lib/smooth-scroll.js"></script>
-    <link rel="preload" href="https://kit.fontawesome.com/28432a2a54.js" as="script" crossorigin="anonymous">
-    <script async src="https://kit.fontawesome.com/28432a2a54.js" crossorigin="anonymous"></script>
-
-
+  <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
 
-    <script></script>
-    <header class="header container">
-        <div class="header__intro">
-            <h1 class="header__title" id="title"></h1>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    const name = "Jaydeep Sosa";
-                    const titleElement = document.getElementById('title');
-                    let index = 0;
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
 
-                    function displayNextCharacter() {
-                        if (index < name.length) {
-                            titleElement.textContent += name[index];
-                            index++;
-                            setTimeout(displayNextCharacter, 80);
-                        }
-                    }
-
-                    displayNextCharacter(); // Start the animation
-                });
-            </script>
-
-            <h1 class="header__contact"></h1>
-            <p class="header__contact">jaydeepsosa006@gmail.com</p>
-            <ul class="header__links list-unstyled list-inline">
-                <li><a href="Jaydeep_Laravel.pdf" class="no-highlight" target="_blank"><i aria-hidden="true"
-                            title="CV" class="fa fa-file-text-o"></i></a></li>
-
-                <li><a href="https://www.linkedin.com/in/jaydeep-sosa006" class="no-highlight" target="_blank"><i
-                            aria-hidden="true" title="LinkedIn" class="fa fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/Jaydeep-sosa" class="no-highlight" target="_blank"> <i
-                            class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://www.instagram.com/jaydeep_k_sosa" class="no-highlight" target="_blank"><i
-                            aria-hidden="true" title="Instagram" class="fa-brands fa-instagram"></i></a></li>
-
-            </ul>
-            <nav>
-                <ul class="header__nav list-unstyled list-inline">
-                    <li><a data-scroll="data-scroll" href="#about">About</a></li>
-                    <li><a data-scroll="data-scroll" href="#news">Education</a></li>
-                    <li><a data-scroll="data-scroll" href="#experience">Experience</a></li>
-                    <li><a data-scroll="data-scroll" href="#work-projects">Work Projects</a></li>
-                    <li><a data-scroll="data-scroll" href="#projects">Academic Projects</a></li>
-                    <li><a data-scroll="data-scroll" href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header__photo">
-            <figure class="header__photo-wrapper"><img src="IMG_1671.jpg" alt="jaydeep sosa" /></figure>
-        </div>
-    </header>
-    <main>
-        <section class="about" id="about">
-            <div class="container">
-                <h2 class="section-title">About</h2>
-                <p>👋 Hi, I'm <strong>Jaydeep Sosa</strong>, an <strong>MCA graduate</strong> from
-                    Ganpat University.</p>
-
-
-                <p>
-                    I'm currently working as a <strong>Laravel Developer</strong> at Binary Web Solutions,
-                    where I build robust web applications using PHP, Laravel, and MySQL. I love creating
-                    clean, efficient code and solving real-world problems through technology. <br><br>
-
-                    With a strong foundation in full-stack web development, I'm passionate about learning
-                    new technologies and staying up-to-date with industry trends. Whether it's building
-                    e-commerce platforms or custom web solutions, I enjoy every step of the development process.
-                    <br><br>
-
-                    When I'm not coding, I'm exploring new frameworks, contributing to projects, and
-                    continuously improving my skills. I'm always excited to take on new challenges and
-                    collaborate with talented teams.
-                </p>
-            </div>
-        </section>
-
-
-        <section id="news" class="news">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="news__item">
-                    <p class="news__item-date"></p>
-                    <p class="news__item-date">2025 </p>
-
-                    <p class="news__item-description"> MASTER COMPUTER APPLICATION.</p> <br>
-                    Ganpat University ,Mehsana
-                    <p>CGPA : 7.91</p>
-                </div>
-                <div class="news__item">
-                    <p class="news__item-date">2023 </p>
-                    <p class="news__item-description">BACHELOR OF COMMERCE </p><br>
-                    Bhakta Kavi Narsing Mehta University ,Junagadh
-                    <p>CGPA : 7.95</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="experience">
-            <div class="container">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="experience__item">
-                    <div class="experience__timeline">
-                        <div class="experience__dot"></div>
-                        <div class="experience__line"></div>
-                    </div>
-                    <div class="experience__content">
-                        <p class="experience__date">2025 - Present (1.3 Year)</p>
-                        <h3 class="experience__title">Laravel Developer</h3>
-                        <p class="experience__company">Binary Web Solutions</p>
-                        <p class="experience__description">
-                            Working on multiple professional Laravel projects including Laravel customization,
-                            PHP-based applications, and responsive website design. Gained hands-on experience in
-                            Laravel.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="work-projects" class="resume">
-            <div class="container">
-                <h2 class="section-title">Work Projects</h2>
-                <p>Professional projects completed during work experience 💼</p>
-                <dl>
-                    <dt class="resume__item-summary">
-                        <a class="resume__title">Duck Duck Baby</a>
-                        <p class="resume__location">Technology Used: Laravel, PHP, HTML, CSS, JavaScript</p>
-                    </dt>
-                    <dd class="resume__item-description">
-                        <p>
-                            Developed and customized a Laravel-based e-commerce website for baby products.
-                            Implemented custom themes, plugins, and responsive design to enhance user experience
-                            and optimize performance.
-                        </p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt class="resume__item-summary">
-                        <a class="resume__title">Rentokill</a>
-                        <p class="resume__location">Technology Used: Laravel, PHP, MySQL, HTML, CSS</p>
-                    </dt>
-                    <dd class="resume__item-description">
-                        <p>
-                            Created a professional pest control services website with custom booking system,
-                            service management features, and responsive design. Integrated database solutions
-                            for customer management and service tracking.
-                        </p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt class="resume__item-summary">
-                        <a class="resume__title">Zodiac Project</a>
-                        <p class="resume__location">Technology Used: Laravel, PHP, MySQL, REST APIs</p>
-                    </dt>
-                    <dd class="resume__item-description">
-                        <p>
-                            Worked on eCommerce-related functionalities. Handled inventory management, order cancellation, and return flow functionalities. Integrated APIs and optimized backend processes.
-                        </p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt class="resume__item-summary">
-                        <a class="resume__title">StarQuick</a>
-                        <p class="resume__location">Technology Used: Laravel, PHP, Shopify API, MySQL</p>
-                    </dt>
-                    <dd class="resume__item-description">
-                        <p>
-                            Worked on Shopify integration and handled product/file upload processes on Shopify stores. Managed SKU-based product uploads and inventory synchronization with Shopify. Developed backend functionalities for file processing and product management.
-                        </p>
-                    </dd>
-                </dl>
-            </div>
-        </section>
-
-        <section id="projects" class="resume">
-            <div class="container">
-                <h2 class="section-title">Academic Projects</h2>
-                <p>University projects and learning experiences 🎓
-                </p>
-                <dl>
-                    <dt class="resume__item-summary">
-                        <a class="resume__title">Student Attendance Management System</a>
-                        <p class="resume__location">Technology Used : PHP,MYSQL,HTML,CSS</p>
-                        <!-- <div class="resume__tags"><span class="resume__ta  g development">development</span></div> -->
-
-                    <dd class="resume__item-description">
-                        <p>
-                            Developed a robust student attendance management system for (AMPICS) project using
-                            PHP and MySQL, focusing on performance, database optimization, and usability.
-                            Created dynamic front-end forms and interfaces using HTML, CSS, and PHP.
-                            Successfully implemented data validation and error handling for a reliable user
-                            experience</p>
-
-                </dl>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="contact__intro">Have a question or want to work together? Feel free to reach out!</p>
-
-                <div style="text-align: center; margin-top: 40px; font-size: 1.3rem;">
-                    <p style="margin-bottom: 15px; color: #fff;">📧 Email Me:</p>
-                    <a href="mailto:jaydeepsosa006@gmail.com"
-                        style="color: #f5d76e; font-weight: bold; text-decoration: none;">
-                        jaydeepsosa006@gmail.com
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const smoothScroll = (target) => {
-            document.querySelector(target).scrollIntoView({
-                behavior: 'smooth'
-            });
-        };
-
-        const links = document.querySelectorAll('a[href^="#"]');
-
-        links.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                smoothScroll(this.getAttribute('href'));
-            });
-        });
-    });
-</script>
-
-<footer class="footer resume" style="background-color: #f1f1f1; color: #333; padding: 20px;">
-    <div class="container">
-
-
-        <ul class="footer__links list-unstyled list-inline">
-            <li><a href="Jaydeep_Laravel.pdf" class="no-highlight" target="_blank"><i aria-hidden="true"
-                        title="CV" class="fa fa-file-text-o"></i></a></li>
-            <li><a href="https://linkedin.com/in/jaydeep-sosa006" class="no-highlight" target="_blank"><i
-                        aria-hidden="true" title="LinkedIn" class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/Jaydeep-sosa" class="no-highlight" target="_blank"> <i
-                        class="fa-brands fa-github"></i></a></li>
-                <!-- <li><a href="https://www.instagram.com/jaydeep_sosa" class="no-highlight" target="_blank"><i
-                            aria-hidden="true" title="Instagram" class="fa-brands fa-instagram"></i></a></li> -->
-
-        </ul>
-        <p style="text-align: center; margin-top: 15px; font-weight: bold;">
-            👥 Live Visitors: <span id="visitor-count" style="color: #667eea; font-size: 1.2rem;">Loading...</span>
-        </p>
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">JS.</a>
+      <ul class="nav-links list-unstyled list-inline">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work-projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="Jaydeep_Laravel.pdf" target="_blank" class="nav-cv-btn no-highlight">
+            <i class="fa fa-download"></i> Resume
+          </a>
+        </li>
+      </ul>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Fetch live visitor count from server
-            fetch('visitor-count.php')
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        document.getElementById('visitor-count').textContent = data.count;
-                    } else {
-                        document.getElementById('visitor-count').textContent = 'Error';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching visitor count:', error);
-                    document.getElementById('visitor-count').textContent = '--';
-                });
-        });
-    </script>
-</footer>
+  </nav>
 
-<script defer="defer" type="text/javascript">smoothScroll.init();</script>
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
 
-<script>
-    // Contact form submission handler
-    document.addEventListener("DOMContentLoaded", function () {
-        const contactForm = document.getElementById('contactForm');
-        const formMessage = document.getElementById('formMessage');
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Available for Work
+          </div>
 
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
+          <h1 class="hero-name" id="heroName">Jaydeep Sosa</h1>
+          <p class="hero-role">Laravel &amp; PHP Developer</p>
 
-                const formData = new FormData(contactForm);
-                const submitButton = contactForm.querySelector('.form__submit');
+          <div class="hero-email">
+            <i class="fa fa-envelope" style="color:var(--accent-3);font-size:0.85rem;"></i>
+            <a href="mailto:jaydeepsosa006@gmail.com">jaydeepsosa006@gmail.com</a>
+          </div>
 
-                // Disable submit button
-                submitButton.disabled = true;
-                submitButton.innerHTML = '<span>Sending...</span><i class="fa fa-spinner fa-spin"></i>';
+          <p class="hero-desc">
+            Passionate Laravel & PHP developer with <strong>1.3+ years</strong> of hands-on experience building
+            and maintaining web applications. Specialised in eCommerce platforms, POS systems, REST APIs, and inventory management.
+          </p>
 
-                fetch('contact-form-handler.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.success) {
-                            formMessage.className = 'form__message form__message--success';
-                            formMessage.textContent = data.message || 'Message sent successfully! I\'ll get back to you soon.';
-                            contactForm.reset();
-                        } else {
-                            formMessage.className = 'form__message form__message--error';
-                            formMessage.textContent = data.message || 'Oops! Something went wrong. Please try again.';
-                        }
+          <div class="hero-actions">
+            <a href="#work-projects" class="btn-primary">
+              <i class="fa fa-briefcase"></i> View Projects
+            </a>
+            <a href="Jaydeep_Laravel.pdf" target="_blank" class="btn-secondary">
+              <i class="fa fa-file-text-o"></i> Download CV
+            </a>
+          </div>
 
-                        // Re-enable submit button
-                        submitButton.disabled = false;
-                        submitButton.innerHTML = '<span>Send Message</span><i class="fa fa-paper-plane"></i>';
+          <div class="hero-social">
+            <a href="https://www.linkedin.com/in/jaydeep-sosa006" target="_blank" class="social-btn no-highlight" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Jaydeep-sosa" target="_blank" class="social-btn no-highlight" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/jaydeep_k_sosa" target="_blank" class="social-btn no-highlight" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="Jaydeep_Laravel.pdf" target="_blank" class="social-btn no-highlight" title="Resume / CV">
+              <i class="fa fa-file-text-o"></i>
+            </a>
+          </div>
 
-                        // Hide message after 5 seconds
-                        setTimeout(() => {
-                            formMessage.className = 'form__message';
-                            formMessage.textContent = '';
-                        }, 5000);
-                    })
-                    .catch(error => {
-                        formMessage.className = 'form__message form__message--error';
-                        formMessage.textContent = 'Network error. Please check your connection and try again.';
+          <!-- Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-number">1.3+</div>
+              <div class="stat-label">Years Exp.</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">4+</div>
+              <div class="stat-label">Live Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">7.91</div>
+              <div class="stat-label">MCA CGPA</div>
+            </div>
+          </div>
+        </div>
 
-                        submitButton.disabled = false;
-                        submitButton.innerHTML = '<span>Send Message</span><i class="fa fa-paper-plane"></i>';
-                    });
-            });
+        <!-- Right: Photo -->
+        <div class="hero-photo-wrapper">
+          <div class="hero-glow"></div>
+          <div class="hero-photo-ring">
+            <div class="hero-photo-inner">
+              <img src="IMG_1671.jpg" alt="Jaydeep Sosa — Laravel Developer" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Get to know me and my technical toolkit</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            👋 Hi, I'm <strong>Jaydeep Sosa</strong>, an <strong>MCA graduate</strong> from
+            Ganpat University, Mehsana. I'm currently working as a <strong>Laravel Developer</strong>
+            at Binary Web Solutions.
+          </p>
+          <p>
+            I build robust, scalable web applications using <strong>PHP, Laravel, and MySQL</strong>.
+            I love crafting clean, efficient code and solving real-world problems through technology.
+          </p>
+          <p>
+            With hands-on experience in eCommerce platforms, POS systems, REST APIs, and Shopify
+            integrations, I enjoy every step of the development process — from database design to
+            front-end polish.
+          </p>
+          <p>
+            When I'm not coding, I'm exploring new frameworks, optimising queries, and
+            continuously sharpening my skills. I thrive on challenges and love collaborating
+            with talented teams to ship great products.
+          </p>
+        </div>
+
+        <div class="skills-grid reveal">
+          <div class="skill-card">
+            <div class="skill-icon purple"><i class="fa-brands fa-laravel"></i></div>
+            <div>
+              <div class="skill-name">Laravel / PHP</div>
+              <div class="skill-level">Advanced</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon cyan"><i class="fa fa-database"></i></div>
+            <div>
+              <div class="skill-name">MySQL</div>
+              <div class="skill-level">Advanced</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon amber"><i class="fa-brands fa-js"></i></div>
+            <div>
+              <div class="skill-name">JavaScript / jQuery</div>
+              <div class="skill-level">Intermediate</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon green"><i class="fa fa-code"></i></div>
+            <div>
+              <div class="skill-name">HTML / CSS</div>
+              <div class="skill-level">Advanced</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon pink"><i class="fa fa-exchange"></i></div>
+            <div>
+              <div class="skill-name">REST APIs</div>
+              <div class="skill-level">Intermediate</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon orange"><i class="fa-brands fa-git-alt"></i></div>
+            <div>
+              <div class="skill-name">Git / GitHub</div>
+              <div class="skill-level">Intermediate</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon cyan"><i class="fa-brands fa-shopify"></i></div>
+            <div>
+              <div class="skill-name">Shopify API</div>
+              <div class="skill-level">Intermediate</div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon purple"><i class="fa fa-server"></i></div>
+            <div>
+              <div class="skill-name">Postman / VS Code</div>
+              <div class="skill-level">Proficient</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       EDUCATION
+  ══════════════════════════════════════════ -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Academic Background</span>
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">My academic journey and qualifications</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">🎓 2023 – 2025</div>
+            <div class="timeline-degree">Master of Computer Application (MCA)</div>
+            <div class="timeline-uni"><i class="fa fa-map-marker" style="color:var(--accent-1);margin-right:6px;font-size:0.8rem;"></i>Ganpat University, Mehsana, Gujarat</div>
+            <span class="timeline-cgpa">CGPA : 7.91</span>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">📚 2020 – 2023</div>
+            <div class="timeline-degree">Bachelor of Commerce (B.Com)</div>
+            <div class="timeline-uni"><i class="fa fa-map-marker" style="color:var(--accent-1);margin-right:6px;font-size:0.8rem;"></i>Bhakta Kavi Narsing Mehta University, Junagadh, Gujarat</div>
+            <span class="timeline-cgpa">CGPA : 7.95</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       EXPERIENCE
+  ══════════════════════════════════════════ -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Career</span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">Professional roles I've held</p>
+      </div>
+
+      <div class="exp-card reveal">
+        <div class="exp-logo">BW</div>
+        <div class="exp-content">
+          <div class="exp-period"><i class="fa fa-calendar" style="margin-right:6px;"></i>Feb 2025 – Present &nbsp;·&nbsp; 1.3 Years</div>
+          <div class="exp-title">Laravel Developer</div>
+          <div class="exp-company">Binary Web Solutions Pvt. Ltd. &mdash; Ahmedabad, Gujarat</div>
+          <p class="exp-desc">
+            Working on multiple professional Laravel projects including eCommerce platforms, POS systems,
+            inventory management, and Shopify integrations. Gained hands-on experience in backend development,
+            REST API creation, MySQL query optimisation, and production bug resolution.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Shopify API</span>
+            <span class="tag">Unicommerce</span>
+            <span class="tag">POS Systems</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       WORK PROJECTS
+  ══════════════════════════════════════════ -->
+  <section class="work-projects" id="work-projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Professional Work</span>
+        <h2 class="section-title">Work Projects</h2>
+        <p class="section-subtitle">Professional projects delivered during employment at Binary Web Solutions</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Duck Duck Baby -->
+        <div class="project-card reveal">
+          <div class="project-icon blue">🛒</div>
+          <div class="project-title">Duck Duck Baby</div>
+          <div class="project-tech">Laravel · PHP · MySQL · HTML · CSS · JS</div>
+          <ul class="project-bullets">
+            <li>Developed backend modules using Laravel and MySQL for a baby-products eCommerce platform.</li>
+            <li>Worked on inventory, SKU, order, and billing management.</li>
+            <li>Created APIs for product syncing.</li>
+            <li>Improved database handling and system performance.</li>
+          </ul>
+        </div>
+
+        <!-- Rentokill -->
+        <div class="project-card reveal">
+          <div class="project-icon green">🐛</div>
+          <div class="project-title">Rentokill</div>
+          <div class="project-tech">Laravel · PHP · MySQL · HTML · CSS</div>
+          <ul class="project-bullets">
+            <li>Worked on service management and backend functionalities.</li>
+            <li>Managed API integration and database operations.</li>
+            <li>Fixed production bugs and improved system stability.</li>
+          </ul>
+        </div>
+
+        <!-- Zodiac -->
+        <div class="project-card reveal">
+          <div class="project-icon amber">♊</div>
+          <div class="project-title">Zodiac Project</div>
+          <div class="project-tech">Laravel · PHP · MySQL · REST APIs</div>
+          <ul class="project-bullets">
+            <li>Worked on eCommerce-related functionalities.</li>
+            <li>Handled inventory management, order cancellation, and return flow.</li>
+            <li>Integrated APIs and optimised backend processes.</li>
+          </ul>
+        </div>
+
+        <!-- StarQuick -->
+        <div class="project-card reveal">
+          <div class="project-icon cyan">⚡</div>
+          <div class="project-title">StarQuick</div>
+          <div class="project-tech">Laravel · PHP · Shopify API · MySQL</div>
+          <ul class="project-bullets">
+            <li>Worked on Shopify integration and product/file upload processes on Shopify stores.</li>
+            <li>Managed SKU-based product uploads and inventory synchronisation with Shopify.</li>
+            <li>Developed backend functionalities for file processing and product management.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ACADEMIC PROJECTS
+  ══════════════════════════════════════════ -->
+  <section class="academic-projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">University Work</span>
+        <h2 class="section-title">Academic Projects</h2>
+        <p class="section-subtitle">Projects built during my MCA programme</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-icon pink">📋</div>
+          <div class="project-title">Student Attendance Management System</div>
+          <div class="project-tech">PHP · MySQL · HTML · CSS</div>
+          <ul class="project-bullets">
+            <li>Developed a robust attendance management system for AMPICS, Ganpat University.</li>
+            <li>Focused on performance, database optimisation, and usability.</li>
+            <li>Created dynamic front-end forms and interfaces using HTML, CSS, and PHP.</li>
+            <li>Implemented data validation and error handling for reliable user experience.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CERTIFICATIONS
+  ══════════════════════════════════════════ -->
+  <section class="education" id="certifications" style="padding:60px 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Credentials</span>
+        <h2 class="section-title">Certifications</h2>
+      </div>
+      <div class="projects-grid" style="max-width:700px;margin:0 auto;">
+        <div class="project-card reveal">
+          <div class="project-icon purple">🏆</div>
+          <div class="project-title">Software Testing Fundamentals</div>
+          <div class="project-tech">Issuer: Infosys</div>
+          <p class="project-desc">Fundamentals of software testing including test design, execution, and quality assurance principles.</p>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-icon amber">🗄️</div>
+          <div class="project-title">Introduction to Oracle: SQL</div>
+          <div class="project-tech">Oracle Academy</div>
+          <p class="project-desc">Foundational SQL skills covering queries, joins, subqueries, and database design concepts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Have a project, opportunity or just want to say hello?</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-card reveal">
+          <div class="contact-icon">✉️</div>
+          <h3 class="contact-title">Say Hello 👋</h3>
+          <p class="contact-sub">
+             Thank you for visiting my portfolio. I'm always open to professional networking,
+            discussing technology, and exploring career opportunities. Feel free to get in touch.
+          </p>
+          <a href="mailto:jaydeepsosa006@gmail.com" class="contact-email-link no-highlight">
+            <i class="fa fa-envelope"></i>
+            jaydeepsosa006@gmail.com
+          </a>
+
+          <div class="contact-social">
+            <a href="https://www.linkedin.com/in/jaydeep-sosa006" target="_blank" class="social-btn no-highlight" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Jaydeep-sosa" target="_blank" class="social-btn no-highlight" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/jaydeep_k_sosa" target="_blank" class="social-btn no-highlight" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="Jaydeep_Laravel.pdf" target="_blank" class="social-btn no-highlight" title="Resume">
+              <i class="fa fa-file-text-o"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo no-highlight">Jaydeep Sosa</a>
+        <p class="footer-copy">
+          &copy; 2025 Jaydeep Sosa. Built with ❤️ &amp; Laravel passion.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/jaydeep-sosa006" target="_blank" class="social-btn no-highlight" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Jaydeep-sosa" target="_blank" class="social-btn no-highlight" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="visitor-badge">
+        👥 Live Visitors: <span id="visitor-count">–</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════ -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    /* ── NAVBAR SCROLL ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    /* ── SMOOTH SCROLL ── */
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+      });
     });
-</script>
 
+    /* ── SCROLL REVEAL ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i % 6) * 80 + 'ms';
+      observer.observe(el);
+    });
+
+    /* ── CURSOR GLOW ── */
+    const glow = document.getElementById('cursorGlow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top  = e.clientY + 'px';
+    }, { passive: true });
+
+    /* ── PDF LINKS – fix white screen ── */
+    const pdfLinks = document.querySelectorAll('a[href$=".pdf"]');
+    if (window.location.protocol === 'file:') {
+      pdfLinks.forEach(l => l.removeAttribute('target'));
+    } else {
+      pdfLinks.forEach(l => {
+        const h = l.getAttribute('href');
+        if (h && !h.includes('?')) l.setAttribute('href', h + '?v=' + Date.now());
+      });
+    }
+
+    /* ── VISITOR COUNT ── */
+    fetch('visitor-count.php')
+      .then(r => r.json())
+      .then(d => {
+        if (d.success) document.getElementById('visitor-count').textContent = d.count;
+        else           document.getElementById('visitor-count').textContent = '--';
+      })
+      .catch(() => { document.getElementById('visitor-count').textContent = '--'; });
+
+  });
+  </script>
+
+</body>
 </html>
