@@ -42,6 +42,7 @@
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#work-projects">Projects</a></li>
+        <li><a href="#rating">Rate</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
           <a href="Jaydeep_Laravel.pdf" target="_blank" class="nav-cv-btn no-highlight">
@@ -170,56 +171,48 @@
             <div class="skill-icon purple"><i class="fa-brands fa-laravel"></i></div>
             <div>
               <div class="skill-name">Laravel / PHP</div>
-              <!-- <div class="skill-level">Advanced</div> -->
             </div>
           </div>
           <div class="skill-card">
             <div class="skill-icon cyan"><i class="fa fa-database"></i></div>
             <div>
               <div class="skill-name">MySQL</div>
-              <!-- <div class="skill-level">Advanced</div> -->
             </div>
           </div>
           <div class="skill-card">
             <div class="skill-icon amber"><i class="fa-brands fa-js"></i></div>
             <div>
               <div class="skill-name">JavaScript / jQuery</div>
-              <div class="skill-level">Intermediate</div>
             </div>
           </div>
           <div class="skill-card">
             <div class="skill-icon green"><i class="fa fa-code"></i></div>
             <div>
               <div class="skill-name">HTML / CSS</div>
-              <!-- <div class="skill-level">Advanced</div> -->
             </div>
           </div>
           <div class="skill-card">
             <div class="skill-icon pink"><i class="fa fa-exchange"></i></div>
             <div>
               <div class="skill-name">REST APIs</div>
-              <div class="skill-level">Intermediate</div>
             </div>
           </div>
           <div class="skill-card">
             <div class="skill-icon orange"><i class="fa-brands fa-git-alt"></i></div>
             <div>
               <div class="skill-name">Git / GitHub</div>
-              <div class="skill-level">Intermediate</div>
             </div>
           </div>
           <div class="skill-card">
             <div class="skill-icon cyan"><i class="fa-brands fa-shopify"></i></div>
             <div>
               <div class="skill-name">Shopify API</div>
-              <div class="skill-level">Intermediate</div>
             </div>
           </div>
           <div class="skill-card">
             <div class="skill-icon purple"><i class="fa fa-server"></i></div>
             <div>
               <div class="skill-name">Postman / VS Code</div>
-              <div class="skill-level">Proficient</div>
             </div>
           </div>
         </div>
@@ -439,12 +432,16 @@
           
           <div id="rating-inputs-container" style="display: block; margin-top: 20px;">
             <input type="text" id="rater-name" placeholder="Enter your name" class="rating-name-input" required>
+            <input type="text" id="rater-designation" placeholder="Enter your Designation (e.g. HR, Developer)" class="rating-name-input" required>
+            <textarea id="rater-note" placeholder="Write a short review or note..." class="rating-name-input" style="min-height: 80px; resize: vertical;" required></textarea>
             <button type="submit" class="btn-primary rating-submit-btn" id="rating-submit-btn">Submit Rating</button>
           </div>
 
           <p class="rating-msg" id="rating-msg">Click a star to rate</p>
         </form>
       </div>
+
+
     </div>
   </section>
 
@@ -511,7 +508,7 @@
             </div>
         </div>
         <div class="visitor-badge">
-            👥 Live Visitors: <span id="visitor-count">–</span>
+            👥 Live Visitors: <span id="visitor-count"></span>
         </div>
         </div>
     </footer>
@@ -578,24 +575,15 @@
     const ratingInputsContainer = document.getElementById('rating-inputs-container');
     const ratingForm = document.getElementById('portfolio-rating-form');
     let currentSelectedRating = 0;
-    
-    const savedRating = localStorage.getItem('portfolioRating');
-    if (savedRating) {
-      updateStars(savedRating);
-      ratingMsg.textContent = 'Thanks for your feedback! You rated ' + savedRating + ' stars.';
-      ratingMsg.style.color = '#4ade80';
-    }
 
     stars.forEach(star => {
       star.addEventListener('mouseover', function() {
-        if (!localStorage.getItem('portfolioRating')) highlightStars(this.getAttribute('data-value'));
+        highlightStars(this.getAttribute('data-value'));
       });
       star.addEventListener('mouseout', function() {
-        if (!localStorage.getItem('portfolioRating')) highlightStars(currentSelectedRating);
+        highlightStars(currentSelectedRating);
       });
       star.addEventListener('click', function() {
-        if (localStorage.getItem('portfolioRating')) return;
-        
         currentSelectedRating = this.getAttribute('data-value');
         updateStars(currentSelectedRating);
         ratingMsg.textContent = 'You selected ' + currentSelectedRating + ' stars!';
@@ -616,6 +604,8 @@
       }
       
       const raterName = document.getElementById('rater-name').value;
+      const raterDesignation = document.getElementById('rater-designation').value;
+      const raterNote = document.getElementById('rater-note').value;
       const submitBtn = document.getElementById('rating-submit-btn');
       submitBtn.textContent = 'Submitting...';
       submitBtn.disabled = true;
@@ -627,17 +617,19 @@
               'Accept': 'application/json'
           },
           body: JSON.stringify({
-              _subject: "New Portfolio Rating from " + raterName,
+              _subject: "New Rating from " + raterName + " (" + raterDesignation + ")",
               Name: raterName,
-              Rating: currentSelectedRating + " Stars"
+              Designation: raterDesignation,
+              Rating: currentSelectedRating + " Stars",
+              Note: raterNote
           })
       })
       .then(response => response.json())
       .then(data => {
-          localStorage.setItem('portfolioRating', currentSelectedRating);
           ratingInputsContainer.style.display = 'none';
           ratingMsg.textContent = 'Thanks for your feedback! You rated ' + currentSelectedRating + ' stars.';
           ratingMsg.style.color = '#4ade80';
+          ratingForm.reset();
       })
       .catch(error => {
           console.error(error);
