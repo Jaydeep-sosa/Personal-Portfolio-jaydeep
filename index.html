@@ -152,23 +152,16 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            👋 Hi, I'm <strong>Jaydeep Sosa</strong>, an <strong>MCA graduate</strong> from
-            Ganpat University, Mehsana. I'm currently working as a <strong>Laravel Developer</strong>
-            at Binary Web Solutions.
+            Hi, I'm <strong>Jaydeep Sosa</strong>, a Laravel Developer based in India. I completed my MCA from Ganpat University, Mehsana, and I'm currently working at Binary Web Solutions.
           </p>
           <p>
-            I build robust, scalable web applications using <strong>PHP, Laravel, and MySQL</strong>.
-            I love crafting clean, efficient code and solving real-world problems through technology.
+            I enjoy building web applications using PHP, Laravel, and MySQL. Over the past couple of years, I've worked on projects like eCommerce websites, POS systems, REST APIs, and Shopify integrations. I like solving backend problems, designing databases, and building features that are simple, reliable, and easy to maintain.
           </p>
           <p>
-            With hands-on experience in eCommerce platforms, POS systems, REST APIs, and Shopify
-            integrations, I enjoy every step of the development process — from database design to
-            front-end polish.
+            What I enjoy most about development is learning something new with every project. Whether it's exploring a Laravel package, improving API performance, or understanding a new technology, I'm always looking for ways to grow as a developer.
           </p>
           <p>
-            When I'm not coding, I'm exploring new frameworks, optimising queries, and
-            continuously sharpening my skills. I thrive on challenges and love collaborating
-            with talented teams to ship great products.
+            Outside of work, I spend time building personal projects, trying out new tools, and improving my coding skills. My goal is to keep learning, write better code, and build applications that make a real difference.
           </p>
         </div>
 
@@ -177,14 +170,14 @@
             <div class="skill-icon purple"><i class="fa-brands fa-laravel"></i></div>
             <div>
               <div class="skill-name">Laravel / PHP</div>
-              <div class="skill-level">Advanced</div>
+              <!-- <div class="skill-level">Advanced</div> -->
             </div>
           </div>
           <div class="skill-card">
             <div class="skill-icon cyan"><i class="fa fa-database"></i></div>
             <div>
               <div class="skill-name">MySQL</div>
-              <div class="skill-level">Advanced</div>
+              <!-- <div class="skill-level">Advanced</div> -->
             </div>
           </div>
           <div class="skill-card">
@@ -198,7 +191,7 @@
             <div class="skill-icon green"><i class="fa fa-code"></i></div>
             <div>
               <div class="skill-name">HTML / CSS</div>
-              <div class="skill-level">Advanced</div>
+              <!-- <div class="skill-level">Advanced</div> -->
             </div>
           </div>
           <div class="skill-card">
@@ -425,6 +418,37 @@
   </section>
 
   <!-- ══════════════════════════════════════════
+       RATING SECTION
+  ══════════════════════════════════════════ -->
+  <section class="rating-section" id="rating">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Feedback</span>
+        <h2 class="section-title">Rate My Portfolio</h2>
+        <p class="section-subtitle">Your rating helps me improve my resume and portfolio.</p>
+      </div>
+      <div class="rating-card reveal">
+        <form id="portfolio-rating-form">
+          <div class="stars" id="portfolio-stars">
+            <i class="fa-solid fa-star star" data-value="1"></i>
+            <i class="fa-solid fa-star star" data-value="2"></i>
+            <i class="fa-solid fa-star star" data-value="3"></i>
+            <i class="fa-solid fa-star star" data-value="4"></i>
+            <i class="fa-solid fa-star star" data-value="5"></i>
+          </div>
+          
+          <div id="rating-inputs-container" style="display: block; margin-top: 20px;">
+            <input type="text" id="rater-name" placeholder="Enter your name" class="rating-name-input" required>
+            <button type="submit" class="btn-primary rating-submit-btn" id="rating-submit-btn">Submit Rating</button>
+          </div>
+
+          <p class="rating-msg" id="rating-msg">Click a star to rate</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
        CONTACT
   ══════════════════════════════════════════ -->
     <section class="contact" id="contact">
@@ -545,6 +569,99 @@
       pdfLinks.forEach(l => {
         const h = l.getAttribute('href');
         if (h && !h.includes('?')) l.setAttribute('href', h + '?v=' + Date.now());
+      });
+    }
+
+    /* ── RATING SYSTEM ── */
+    const stars = document.querySelectorAll('#portfolio-stars .star');
+    const ratingMsg = document.getElementById('rating-msg');
+    const ratingInputsContainer = document.getElementById('rating-inputs-container');
+    const ratingForm = document.getElementById('portfolio-rating-form');
+    let currentSelectedRating = 0;
+    
+    const savedRating = localStorage.getItem('portfolioRating');
+    if (savedRating) {
+      updateStars(savedRating);
+      ratingMsg.textContent = 'Thanks for your feedback! You rated ' + savedRating + ' stars.';
+      ratingMsg.style.color = '#4ade80';
+    }
+
+    stars.forEach(star => {
+      star.addEventListener('mouseover', function() {
+        if (!localStorage.getItem('portfolioRating')) highlightStars(this.getAttribute('data-value'));
+      });
+      star.addEventListener('mouseout', function() {
+        if (!localStorage.getItem('portfolioRating')) highlightStars(currentSelectedRating);
+      });
+      star.addEventListener('click', function() {
+        if (localStorage.getItem('portfolioRating')) return;
+        
+        currentSelectedRating = this.getAttribute('data-value');
+        updateStars(currentSelectedRating);
+        ratingMsg.textContent = 'You selected ' + currentSelectedRating + ' stars!';
+        ratingMsg.style.color = 'var(--text-secondary)';
+        
+        this.style.transform = 'scale(1.3)';
+        setTimeout(() => this.style.transform = 'scale(1)', 200);
+      });
+    });
+
+    ratingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      if (currentSelectedRating == 0) {
+        ratingMsg.textContent = 'Please select a star rating first!';
+        ratingMsg.style.color = '#f59e0b';
+        return;
+      }
+      
+      const raterName = document.getElementById('rater-name').value;
+      const submitBtn = document.getElementById('rating-submit-btn');
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
+
+      fetch("https://formsubmit.co/ajax/jaydeepsosa006@gmail.com", {
+          method: "POST",
+          headers: { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+              _subject: "New Portfolio Rating from " + raterName,
+              Name: raterName,
+              Rating: currentSelectedRating + " Stars"
+          })
+      })
+      .then(response => response.json())
+      .then(data => {
+          localStorage.setItem('portfolioRating', currentSelectedRating);
+          ratingInputsContainer.style.display = 'none';
+          ratingMsg.textContent = 'Thanks for your feedback! You rated ' + currentSelectedRating + ' stars.';
+          ratingMsg.style.color = '#4ade80';
+      })
+      .catch(error => {
+          console.error(error);
+          ratingMsg.textContent = 'Something went wrong. Please try again.';
+          submitBtn.textContent = 'Submit Rating';
+          submitBtn.disabled = false;
+      });
+    });
+
+    function highlightStars(val) {
+      stars.forEach(s => {
+        if (s.getAttribute('data-value') <= val) s.classList.add('hovered');
+        else s.classList.remove('hovered');
+      });
+    }
+
+    function updateStars(val) {
+      stars.forEach(s => {
+        if (s.getAttribute('data-value') <= val) {
+          s.classList.add('selected');
+          s.classList.remove('hovered');
+        } else {
+          s.classList.remove('selected', 'hovered');
+        }
       });
     }
 
